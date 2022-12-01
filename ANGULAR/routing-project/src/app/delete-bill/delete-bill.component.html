@@ -1,0 +1,18 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class="container text-center">
+    <h2 class=header>Delete Bill</h2> <br>
+    
+    <div class=input>
+    <label id="lab">Enter Bill ID</label><br>
+    <input type="text" #bIdRef/> 
+
+    <div class="text-center py-4">
+        <button  class="btn btn-danger mr-2" value="Delete" (click)="deleteBill(bIdRef.value)">Delete</button>
+        <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+    </div>
+
+    </div>
+    <br/>
+    <br>
+    <h3 id="msg">{{msg}}</h3>
+</div>

@@ -1,0 +1,50 @@
+SQL
+username : root 
+Password : root
+SQL port 3307
+Tomcat port 9191
+
+
+Table: Customer
+Entity:cust_ID(int PK,Auto)
+	Cust_name string
+	cust_phone
+	cust_addr
+	cust_pass(varchar)
+	cust_login(Unique varchar)
+/*
+under review ______________
+Table:Admin
+Entity:
+
+Table:Order
+Entity:Order_Id(PK,Int)
+	Items
+	Amount(int)//
+	Bill_id(for key)
+	Cust_id(for key)
+	Order_date(date type)
+	
+*/
+	
+Table:Stock (Medicines)//order will be placed here
+Entity:Stock_id(PK,Int)
+	Item_name(varchar)
+	Expiry(Date)
+	Quantity(int)
+	Price(int)
+	Type (varchar)
+Table: Bill
+Entity:Bill_Id(PK,Int)
+	Item_names(String)//
+	Amount(int)//
+	Quantity(int)//
+	Cust_id(fun key)
+	stock_add(int fun key)
+	
+Table : Supplier(hard coded to show everything)
+Entity: supplier_s(PK,int)
+	Supplier_name
+	Supplier_quantity
+	Supplier_type
+	

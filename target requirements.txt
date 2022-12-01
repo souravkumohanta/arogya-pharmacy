@@ -1,0 +1,5 @@
+add header and footer.
+login,register and landing page design.
+display bill for customers.
+your orders.
+create separate display for stock details on the admin side.

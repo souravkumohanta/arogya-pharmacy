@@ -1,0 +1,23 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class=container>
+    <h2 class=header>Update Bill Details</h2>
+    <form #billRef="ngForm" (ngSubmit)="updateBillInfo(billRef.value)">
+        <label>Bill Id</label> <br>
+        <input type="number" name="bill_id" ngModel/><br/>
+        <label>Item Name</label><br>
+        <input type="text" name="item_name" ngModel/><br/>
+        <label>Amount</label><br>
+        <input type="number" name="amount" ngModel/><br/>
+        <label>Quantity</label><br>
+        <input type="number" name="quantity" ngModel/><br/>
+        <label>Customer ID</label><br>
+        <input type="number" name="cust_id" ngModel/><br/>
+      
+        <div class="text-center py-4">
+            <button type="submit" value="Update Bill" class="btn btn-danger mr-2">Update Bill</button>
+            <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+        </div>
+      
+    </form>
+    <h3 id="msg">{{msg}}</h3>
+</div>

@@ -1,0 +1,66 @@
+<div>
+     
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white" style="background:rgb(13 8 8 / 52%) !important;">
+    <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+         
+          <li class="nav-item mx-2">
+            <a class="nav-link" routerLink="cart" class="text-white" (click)="OnClickCart()">Cart</a>
+          </li>
+          <!-- <li class="nav-item mx-2">
+            <a class="nav-link" router-link="Orders" class="text-white" (click)=" onpressorders()" >Your Orders</a>
+          </li> -->
+            <li class="nav-item mx-2">
+              <div class="dropdown">
+                <button class="dropbtn"><img src="../assets/profile-user.png"/>{{customer.cust_name}}</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="logout()">Logout</a>
+                 
+              
+                </div>
+              </div>
+            </li>
+        </ul>    
+       
+      </div>
+    </nav>
+
+    
+<header class="text-center text-black py-5">
+  <h1 class="display-5 font-weight-bold mb-4">Thank You For Shopping With Us.</h1>
+
+ 
+</header>
+
+
+
+</div>
+
+<footer class="text-center text-lg-start">
+    <!-- Copyright -->
+ <div class="text-center p-3">
+   © 2021 Copyright
+   <a class="text-dark" href="#">Arogya Pharmacy</a>
+ </div>
+ <!-- Copyright -->
+ </footer>
+
+
+
+
+ <!-- <div>
+  <h2>Find Bill By Id</h2>
+  <label for="">cust ID</label>
+  <input type="number" #cidRef/>
+  <input type="button" value="find Product" (click)="callService(cidRef.value)"/>
+  {{msg}}
+  <div >
+      Id is {{billRef.bill_id}}, Name is {{billRef.item_name}}
+  </div> 
+ 
+</div> -->

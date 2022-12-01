@@ -1,0 +1,24 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class=container>
+    <h1 class="header text-black">Store Bills</h1>
+    <form [formGroup]="billInfo" (ngSubmit)="storeBillDetails()">
+        <label>Bill id</label><br>
+        <input type="number" formControlName="bill_id"/><br/>
+        <label>Item Name</label><br>
+        <input type="text" formControlName="item_name"/><br/>
+        <label>Amount</label><br>
+        <input type="number" formControlName="amount"/><br/>
+        <label>Quantity</label><br>
+        <input type="number" formControlName="quantity"/><br/>
+        <label>Customer Id</label><br>
+        <input type="number" formControlName="cust_id"/><br/>
+      
+        <div class="text-center py-4">
+            <button type="submit" value="store Bill" class="btn btn-danger mr-2">Store Bill</button>
+            <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+        </div>
+
+    </form>
+    <h3 id="msg">{{msg}}</h3>
+
+</div>

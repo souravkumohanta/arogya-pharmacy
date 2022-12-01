@@ -1,0 +1,109 @@
+
+  <!-- <form #loginRef="ngForm" (ngSubmit)="loginUser(loginRef.value)">
+    <h1>Login</h1>
+    <div class="inset">
+    
+      <label for="username">Username</label>
+      <input type="text"  name="cust_login" ngModel >
+
+      <label for="password">PASSWORD</label>
+      <input type="password" name="pass" id="pass"  ngModel>
+     
+    
+    <p>
+      <input type="checkbox" name="remember" id="remember">
+      <label for="remember">Remember me </label>
+    </p>
+
+
+    
+   <div class="custom-control custom-radio">
+    <input id="customer" type="radio" class="custom-control-input" value="customer" name="desg" ngModel>
+    <label class="custom-control-label" for="customer">customer</label>
+ </div>
+
+ <div class="custom-control custom-radio">
+    <input id="admin" type="radio" class="custom-control-input" value="admin" name="desg" ngModel>
+    <label class="custom-control-label" for="admin">admin</label>
+ </div>
+    
+    </div>
+    <p class="p-container">
+      <span>Forgot password ?</span>
+      <input type="submit" value="Login" [disabled]="!loginRef.valid">
+     <span>
+        <button class="btn btn-info" (click)="register()">register new user </button>
+        </span>
+    </p>
+  </form> -->
+
+  <nav class="navbar navbar-dark bg-dark" style="background:rgb(13 8 8 / 52%) !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
+      
+    </div>
+  </nav>
+
+  <main class="d-flex align-items-center min-vh-100" style="background-color: #eeeeee;">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5" style="background-color: black;">
+            <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/login.jpg" alt="logo" class="login-card-img">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+              <!-- <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/logo.svg" alt="logo" class="logo">  -->
+              <h2>Arogya Pharmacy</h2>
+              </div>
+              <p class="login-card-description">Sign into your account</p>
+              <form #loginRef="ngForm" (ngSubmit)="loginUser(loginRef.value)" name="myform">
+                  <div class="form-group">
+                    <label for="username" class="sr-only">Username</label>
+                    <input type="text" id="cust_login"  name="cust_login"  class="form-control" placeholder="Username" ngModel>
+                    <div class="invalid-feedback1 text-danger" style="display: none;">*Required Username</div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" ngModel>
+                    <div class="invalid-feedback2 text-danger" style="display: none;">*Required Password</div>
+                  </div>
+                  <nav class="login-card-footer-nav">
+                    <div class="custom-control custom-radio">
+                      <input id="customer" type="radio" class="custom-control-input" value="customer" name="desg" ngModel>
+                      <label class="custom-control-label" for="customer">Customer</label>
+                   </div>
+                  
+                   <div class="custom-control custom-radio">
+                      <input id="admin" type="radio" class="custom-control-input" value="admin" name="desg" ngModel>
+                      <label class="custom-control-label" for="admin">Admin</label>
+                   </div>
+                  </nav>
+                  <div  class="invalid-feedback3 py-2 text-danger" style="display: none;">*Select Admin/Customer</div>
+                  <div  class="invalid-feedback4 py-2 text-danger" style="display: none;">*Incorrect Username/Password</div>
+                  
+                  <div class="form-group py-3">
+                  <input name="login" id="login" class="btn btn-block btn-info login-btn mb-4" type="submit" value="Login" [disabled]="!loginRef.valid">
+                  </div>
+                </form>
+                <p class="login-card-footer-text">Don't have an account? <a routerLink="register" class="text-reset" (click)="onclickregister()">Register here</a></p>
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </main>
+  <footer class="text-center text-lg-start">
+    <!-- Copyright -->
+ <div class="text-center p-3">
+   © 2021 Copyright
+   <a class="text-dark" href="#">Arogya Pharmacy</a>
+ </div>
+ <!-- Copyright -->
+ </footer>
+
+ 

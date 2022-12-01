@@ -1,0 +1,16 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div class=container>
+    <h2 class=header>Update Product Price</h2>
+    <form #productRef="ngForm" (ngSubmit)="updateProductInfo(productRef.value)">
+        <label>Stock id</label><br>
+        <input type="number" name="pid" ngModel/><br/>
+        <label>Price</label><br>
+        <input type="number" name="price" ngModel/><br/>
+    
+        <div class="text-center py-4">
+            <button type="submit" value="Update Price" class="btn btn-danger mr-2">Update Price</button>
+            <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+        </div>
+    </form>
+    <h3 id="msg">{{msg}}</h3>
+</div>

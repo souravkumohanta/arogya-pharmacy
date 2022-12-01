@@ -1,0 +1,13 @@
+<div class=container>
+    <h2>Update Order</h2>
+    <form #orderInfo="ngForm" (ngSubmit)="updateOrder(orderInfo.value)">
+        <label>Order id</label>
+        <input type="number" name="pid" ngModel/><br/>
+        <label>Price</label>
+        <input type="number" name="price" ngModel/><br/>
+        <input type="submit" value="Update Price"/>
+        <input type="reset" value="reset"/><br/><br/>
+        <input type="button" value="back" (click)="onpress()">
+    </form>
+    {{msg}}
+</div>

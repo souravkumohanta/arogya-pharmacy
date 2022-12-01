@@ -1,0 +1,29 @@
+<div>
+    <h2 class=header>Order Table</h2><div>
+    <input type="button" value="display orders" (click)="loadData()">
+    <div *ngIf="flag">
+   <!-- <table border=1>-->
+    <table id="bills">
+            <tr>
+                <td>Order ID</td>
+                <td>ITEMS</td>
+                <td>AMOUNT</td>
+                <td>BILL ID</td>
+                <td>CUSTOMER ID</td>
+                <td>ORDER DATE</td>
+            </tr>
+            <tr *ngFor="let Order of orders">
+                <td>{{Order.order_id}}</td>
+                <td>{{Order.items}}</td>
+                <td>{{Order.amount}}</td>
+                <td>{{Order.bill_id}}</td>
+                <td>{{Order.cust_id}}</td>
+                <td>{{Order.order_date}}</td>
+            </tr>
+
+    </table>
+</div>
+</div>
+<br>
+    <input type="button" value="Back" (click)="onpress()">
+</div>

@@ -1,0 +1,87 @@
+
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white" style="background:rgb(13 8 8 / 52%) !important;">
+        <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+             
+            
+              <!-- <li class="nav-item mx-2">
+                <a class="nav-link" router-link="Orders" class="text-white" (click)=" onpressorders()" >Your Orders</a>
+              </li> -->
+                <li class="nav-item mx-2">
+                  <div class="dropdown">
+                    <button class="dropbtn"><img src="../assets/profile-user.png"/>{{customer.cust_name}}</button>
+                    <div class="dropdown-content">
+                      <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="logout()" >Logout</a>
+  
+                  
+                    </div>
+                  </div>
+                </li>
+            </ul>    
+           
+          </div>
+        </nav>
+  
+
+
+<!-- -->
+
+    <nav class="navbar navbar-dark bg-dark" style="background:rgb(13 8 8 / 52%) !important;">
+        <div class="container-fluid">
+          <a class="navbar-brand title" routerLink="Customer"  (click)="onClickHome()">Arogya Pharmacy</a>
+          <form class="d-flex dash-tab">
+            
+          </form>
+        </div>
+      </nav>
+
+
+    <div class="container mt-5 mb-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-8">
+                <div class="p-2">
+                    <h4>{{customer.cust_name}} 's Cart</h4>
+                    <!-- <div class="d-flex flex-row align-items-center pull-right"><span class="mr-1">Sort by:</span><span class="mr-1 font-weight-bold">Price</span><i class="fa fa-angle-down"></i></div> -->
+                </div>
+
+                <div *ngFor="let bill of billinfo">
+                <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
+                  <div class="mr-1"><img class="rounded" src="../../assets/medicine.jpg" width="70"></div>
+                     <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_name}}</span>
+                    <!--    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{bill.item_no}}</span>-->
+                        <div class="d-flex flex-row product-desc">
+                            
+                            <div class="size mr-1"><span class="text-grey">Price:</span><span class="font-weight-bold">&nbsp;{{bill.amount}}</span></div>
+                            <div class="color"><span class="text-grey">quantity:</span><span class="font-weight-bold">&nbsp;{{bill.quantity}}</span></div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
+                        <!-- <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i> -->
+                        <button class="btn btn-danger btn-block btn-lg ml-2 pay-button" type="button" (click)="onPressDelete(bill.bill_id)">Delete Item</button>
+                    </div>
+                </div>
+              
+            </div>
+
+         <!-- <div class   ="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><input type="text" class="form-control border-0 gift-card" placeholder="discount code/gift card"><button class="btn btn-outline-warning btn-sm ml-2" type="button">Apply</button></div> -->
+            <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><button class="btn btn-warning btn-block btn-lg ml-2 pay-button" type="button" (click)="onPressProceed(customer.cust_id)">Proceed to Pay</button></div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="text-center text-lg-start">
+    <!-- Copyright -->
+ <div class="text-center p-3">
+   © 2021 Copyright
+   <a class="text-dark" href="#">Arogya Pharmacy</a>
+ </div>
+ <!-- Copyright -->
+ </footer>
+

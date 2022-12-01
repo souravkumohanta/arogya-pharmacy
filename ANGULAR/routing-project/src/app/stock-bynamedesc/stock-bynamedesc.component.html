@@ -1,0 +1,29 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div>
+    <h2 class=header>Stock Sorted By Name In Descending Order</h2>
+    <div *ngIf="flag">
+        
+            <table id="bills">
+                <tr>
+                    <td>STOCK ID</td>
+                    <td>ITEM NAME</td>
+                    <td>EXPIRY</td>
+                    <td>QUANTITY</td>
+                    <td>PRICE</td>
+                    <td>TYPE</td>
+                </tr>
+                <tr *ngFor="let Stock of stocks">
+                    <td>{{Stock.stock_id}}</td>
+                    <td>{{Stock.item_name}}</td>
+                    <td>{{Stock.expiry}}</td>
+                    <td>{{Stock.quantity}}</td>
+                    <td>{{Stock.price}}</td>
+                    <td>{{Stock.type}}</td>
+                </tr>
+    
+        </table>
+    </div>
+    <div class="text-center py-4">
+        <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+    </div>
+</div>

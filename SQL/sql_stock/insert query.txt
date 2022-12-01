@@ -1,0 +1,9 @@
+insert into stock values(1001, "Metformin", "2022-02-22" , 10, 15, "tablet");
+
+insert into stock values(1002, "Paracetamol", "20-05-2022" , 12, 5, "tablet");
+
+insert into stock values(1003, "Antifungal", "2023-07-10" , 7, 35, "liquid");
+
+insert into stock values(1004, "Holoperidol", "2021-10-20" , 4, 17, "capsule");
+
+ insert into stock values(1005, "Dolo", "2025-1-2" , 5, 10, "powder");

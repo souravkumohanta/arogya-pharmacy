@@ -1,0 +1,20 @@
+
+mysql> create table customer(cust_id int auto_increment primary key,cust_name varchar(20) not null,cust_phone int not null,cust_addr varchar(20) not null,cust_pass varchar(20) not null,cust_login varchar(10) not null);
+
+
+mysql> insert into customer values(101,"sourav",9876533,"OD","password","login");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into customer values(102,"Rajan",9876533,"RJ","password","login");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values(103,"Sohel",9876533,"GOA","password","login");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values(104,"Vishal",9876533,"MP","password","login");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values(105,"Steve",9876533,"UK","password","login");
+Query OK, 1 row affected (0.03 sec)
+
+mysql>

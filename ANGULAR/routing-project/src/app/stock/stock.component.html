@@ -1,0 +1,77 @@
+<!-- 
+<div>
+    <h2 class=header>Stock Details</h2><div> -->
+
+
+   <!-- <h2>Stock Table</h2><div>
+
+     <input type="button" value="display stocks" (click)="loadData()">
+     <div *ngIf="flag">
+        <!--<table border=1>-->
+            <!-- <table id="bills">
+            <tr>
+                <td>STOCK ID</td>
+                <td>ITEM NAME</td>
+                <td>EXPIRY</td>
+                <td>QUANTITY</td>
+                <td>PRICE</td>
+                <td>TYPE</td>
+            </tr>
+            <tr *ngFor="let Stock of stockinfo">
+                <td>{{Stock.stock_id}}</td>
+                <td>{{Stock.item_name}}</td>
+                <td>{{Stock.expiry}}</td>
+                <td>{{Stock.quantity}}</td>
+                <td>{{Stock.price}}</td>
+                <td>{{Stock.type}}</td>
+            </tr>
+
+        </table>
+    </div> 
+     -->
+<div>
+    <br>
+    <form class = "form-inline">
+        <div class = "form-group">
+            <!-- <label><h4> Search  </h4></label>
+            <input type = "text" name = "search" placeholder = "Product search..."  [(ngModel)]="searchText" class = "form-control"> -->
+         
+        </div>
+    </form>  
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row">
+            <div class="col-md-4 mt-2"  *ngFor="let Stock of stockinfo">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-img-actions"> <img src="../../assets/medicine.jpg" class="card-img img-fluid" width="96" height="35" alt=""> </div>
+                    </div>
+                    <div class="card-body bg-light text-center">
+                        <div class="mb-2">
+                            <h5 class="font-weight-semibold mb-2" style="text-transform: uppercase;"> <a href="#" style="color: #383838;" class="text-default mb-2" data-abc="true">{{Stock.type}}</a> </h5> <a href="#" class="text-muted" data-abc="true">Expiry : {{Stock.expiry}}</a>
+                        </div>
+                        <h3 class="mb-0 font-weight-semibold">{{Stock.item_name}}</h3>
+                        <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                        <div class="text-muted mb-3">Rs. {{Stock.price}}</div> <button type="button" class="btn bg-cart" data-toggle="modal" data-target="#exampleModalCenter" (click)="add(Stock.stock_id,customer.cust_id)"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <br>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center border-0">
+            <h5 class="modal-title " id="exampleModalLongTitle">Item Added to Cart!</h5>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,21 @@
+<div class=container>
+    <h2>Store Order Details</h2>
+    <form [formGroup]="orderInfo" (ngSubmit)="orderinsert()">
+        <label>Order id</label>
+        <input type="number" formControlName="order_id"/><br/>
+        <label>No of Items</label>
+        <input type="number" formControlName="items"/><br/>
+        <label >Amount</label>
+        <input type="number" formControlName="amount"><br/>
+        <label>Bill ID</label>
+        <input type="number" formControlName="bill_id"/><br/>
+        <label>Customer ID</label>
+        <input type="number" formControlName="cust_id"/><br/>
+        <label>Order Date</label>
+        <input type="date" formControlName="order_date"/><br/>
+        <input type="submit" value="store product info"/>
+        <input type="reset" value="reset"/><br/><br/>
+        <input type="button" value="back" (click)="onpress()">
+    </form>
+    {{msg}}
+</div>

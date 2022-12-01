@@ -1,0 +1,56 @@
+
+  body {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .dashboard
+  {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .dash-tab .btn
+  {
+   margin: 5px;
+  }
+
+  .title
+  {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .page-holder {
+    min-height: 100vh;
+  }
+  
+  .bg-cover {
+    background-size: cover !important;
+  }
+
+  footer 
+  {
+    background-color: rgb(27 26 26 / 34%);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    margin-bottom: 0px;
+  }
+
+  footer a, footer div{
+    color: #fff !important;
+  }
+
+  .img-responsive
+  {
+    height: 220px;
+  }

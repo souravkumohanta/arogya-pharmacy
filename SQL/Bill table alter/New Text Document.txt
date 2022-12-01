@@ -1,0 +1,12 @@
+follow this steps to add auto increment for bill_id
+
+
+lock tables bill write,orders write;
+ 
+alter table orders drop foreign key orders_ibfk_2;
+
+alter table  bill modify bill_id int auto_increment;
+
+ alter table orders add constraint orders_ibfk_2  foreign key(bill_id) references bill(bill_id);
+
+ unlock tables;

@@ -1,0 +1,178 @@
+<!-- <h1>register</h1>
+<div>
+    <h2>Login Customer Page</h2>
+    <form #userRef="ngForm" (ngSubmit)="addCustomerComponent(userRef.value)">
+        <label>Name</label>
+        <input type="text" name="cust_name"  ngModel  /><br>
+        <label>Address</label>
+        <input type="text" name="cust_addr" ngModel  /><br>
+        <label>Phone Number</label>
+        <input type="number" name="cust_phone" ngModel /><br>
+        <label>User Name</label>
+        <input type="text" name="cust_login" ngModel /><br>
+        <label>Passsword</label>
+        <input type="password" name="pass" ngModel /><br>
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </form>
+    {{msg}}
+</div> -->
+
+<nav class="navbar navbar-dark bg-dark" style="background:rgb(13 8 8 / 52%) !important;">
+  <div class="container-fluid">
+    <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
+    <form class="d-flex dash-tab">
+      <button class="btn btn-outline-light" (click)="loginRedirect()">Login</button>
+    </form>
+  </div>
+</nav>
+
+<main class="d-flex align-items-center min-vh-100" style="background-color: #eeeeee;">
+    <div class="container">
+      <div class="card login-card">
+        <div class="row no-gutters">
+          <div class="col-md-5" style="background-color: black;">
+            <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/login.jpg" alt="logo" class="login-card-img">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="brand-wrapper">
+              <!-- <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/logo.svg" alt="logo" class="logo">  -->
+              <h2>Arogya Pharmacy</h2>
+              </div>
+              <p class="login-card-description">Register with Us.</p>
+              <form autocomplete="off" #userRef="ngForm" (ngSubmit)="addCustomerComponent(userRef.value)" class="needs-validation" novalidate> 
+                  <div class="form-group mb-4">
+                    <label for="Name" class="sr-only">Name</label>
+                    <input type="text" name="cust_name" id="cust_name" class="form-control" placeholder="Name" ngModel #nameRef="ngModel" required minlength="4"/>
+                    <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)">
+              
+                      <span [hidden]="!nameRef.errors.required" style="color: red">
+                            *Name is Required        
+                      </span>
+                    
+                      <span [hidden]="!nameRef.errors.minlength"  style="color: red">
+                            *Name Must Be at least 4 characters
+                      </span>  
+      
+                    </div>
+                    <!-- <div class="invalid-feedback1 text-danger" style="display: none;">*Required Name</div> -->
+
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="Address" class="sr-only">Address</label>
+                    <input type="text" name="cust_addr" class="form-control" placeholder="Address"  ngModel  #addRef="ngModel" required minlength="5" />
+                    <div *ngIf="addRef.errors && (addRef.dirty || addRef.touched)">
+              
+                      <span [hidden]="!addRef.errors.required" style="color: red">
+                            *Address is Required        
+                      </span>
+                      <span [hidden]="!addRef.errors.minlength"  style="color: red">
+                           *Address Must Contain at least 5 characters
+                      </span>  
+                    </div>
+                    <!-- <div class="invalid-feedback2 text-danger" style="display: none;">*Required Address</div> -->
+                  </div>
+
+
+
+                  <div class="form-group mb-4">
+                    <label for="Phone" class="sr-only">Phone Number</label>
+                    <input type="text" name="cust_phone" id="cust_phone" class="form-control" placeholder="Phone Number" ngModel  #phoneRef="ngModel" required minlength="10" maxlength="10" />
+                    <div *ngIf="phoneRef.errors && (phoneRef.dirty || phoneRef.touched)">
+              
+                      <span [hidden]="!phoneRef.errors.required" style="color: red">
+                              *Phone Number is Required       
+                      </span>
+                      
+                      <span [hidden]="!phoneRef.errors.maxlength"  style="color: red">
+                              *PhoneNumber Must Be 10 Digits
+                      </span>  
+                      <span [hidden]="!phoneRef.errors.minlength"  style="color: red">
+                              *PhoneNumber Must Be 10 Digits
+                </span> 
+        
+                    </div>
+                    <!-- <div class="invalid-feedback3 text-danger" style="display: none;">*Required Phone Number</div> -->
+                  </div>
+
+
+                  <div class="form-group mb-4">
+                    <label for="Username" class="sr-only">Username</label>
+                    <input type="text" id="cust_login" name="cust_login" class="form-control"  placeholder="Username"  ngModel #usernameRef="ngModel" required minlength="4"  />
+                    <div *ngIf="usernameRef.errors && (usernameRef.dirty || usernameRef.touched)">
+
+                      <span [hidden]="!usernameRef.errors.required" style="color: red">
+                              *UserName is Required             
+                      </span>
+        
+                      <span [hidden]="!usernameRef.errors.minlength"  style="color: red">
+                              *UserName Must Contain at least 4 character
+                      </span>
+        
+                    </div>
+                    <!-- <div class="invalid-feedback4 text-danger" style="display: none;">*Required Username</div> -->
+                  </div>
+
+
+                  <div class="form-group mb-4">
+                    <label for="Password" class="sr-only">Password</label>
+                    <input type="password" id="password" name="pass" class="form-control" placeholder="Password" ngModel #passRef="ngModel" required minlength="6" />
+                    <div *ngIf="passRef.errors && (passRef.dirty || passRef.touched)">
+
+                      <span [hidden]="!passRef.errors.required" style="color: red">
+                            *Password is Required            
+                      </span>
+        
+                      <span [hidden]="!passRef.errors.minlength"  style="color: red">
+                           *Passsword must contain at least 6 characters
+                      </span>
+        
+                    </div>
+                  
+                    <!-- <div class="invalid-feedback5 text-danger" style="display: none;">*Required Password</div> -->
+
+
+                  </div>
+                  <div class="form-group py-3">
+                  <input [disabled]="!userRef.valid" class="btn btn-block btn-info login-btn mb-4" type="submit" value="Register" >
+                  </div>
+                </form>
+             {{msg}}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer class="text-center text-lg-start">
+    <!-- Copyright -->
+ <div class="text-center p-3">
+   © 2021 Copyright
+   <a class="text-dark" href="#">Arogya Pharmacy</a>
+ </div>
+ <!-- Copyright -->
+ </footer>
+
+
+ <script type="text/javascript">
+(() => {
+  'use strict';
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation');
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>

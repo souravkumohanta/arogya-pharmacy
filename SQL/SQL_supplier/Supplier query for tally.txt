@@ -1,0 +1,7 @@
+ select year(delivery_date) as year,month(delivery_date) as month,sum(quantity) as total_quantity,sum(price) as total_amount from supplier group by year(delivery_date),month(delivery_date) order by year(delivery_date),month(delivery_date);
++------+-------+----------------+--------------+
+| year | month | total_quantity | total_amount |
++------+-------+----------------+--------------+
+| 2021 |     2 |            300 |         4000 |
+| 2021 |     3 |           1400 |         8500 |
++------+-------+----------------+--------------+

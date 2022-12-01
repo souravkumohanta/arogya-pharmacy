@@ -1,0 +1,112 @@
+<div>
+   
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white" style="background:rgb(13 8 8 / 52%) !important;">
+    <a class="navbar-brand title" routerLink="customer" (click)="onClickHome()">Arogya Pharmacy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Stocks</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDisplay()">Display Stocks</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockStore()">Store Stock</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockUpdate()">Update Stock</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDelete()">Delete Stock</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDisplayAsc()">Display Stock In Ascending</a>
+                  <a class="dropdown-content" routerLink="Stocks"  class="text-white" (click)="onPressStockDisplayDsc()">Display Stock In Descending</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Customer</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerDisplay()">Display Customer</a>
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerStore()">Delete Customer</a>
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerId()">Customer Sort By Id</a>
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerName()">Customer Sort By Name</a>
+                  <a class="dropdown-content" routerLink="Customer"  class="text-white" (click)="onPressCustomerAddress()">Customer Sort By Address</a>
+              
+                </div>
+              </div>
+            </li>
+
+            <!-- <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Orders</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplay()">Display Orders</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderStore()">Store Order</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderUpdate()">Update Order</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDelete()">Delete Order</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplayDsc()">Display Order In Desccending</a>
+                  <a class="dropdown-content" routerLink="Orders"  class="text-white" (click)="onPressOrderDisplayDate()">Display Based on Date</a>
+               
+                </div>
+              </div>
+            </li> -->
+
+            <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Supplier</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierDisplay()">Display Supplier</a>
+                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierStore()">Stock Request</a>
+                  <a class="dropdown-content" routerLink="Supplier"  class="text-white" (click)="onPressSupplierMonthEnd()">Supplier Details Sort By Delivery_Date</a>
+                </div>
+              </div>
+            </li>
+            
+            <li class="nav-item mx-3">
+              <div class="dropdown">
+                <button class="dropbtn">Bills</button>
+                <div class="dropdown-content">
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressDisplay()">Display Bills</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressStore()">Store Bill</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressUpdate()">Update Bill</a>
+                  <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressDelete()">Delete Bill</a>
+                  <!-- <a class="dropdown-content" routerLink="Bills"  class="text-white" (click)="onPressFind()">Find Bill</a> -->
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item mx-2">
+              <div class="dropdown">
+                <button class="dropbtn"><img src="../assets/profile-user.png"/>Admin</button>
+                <div class="dropdown-content admin-logout">
+                  <a class="dropdown-content text-white" routerLink="Customer"  (click)="logout()">Logout</a>
+
+              
+                </div>
+              </div>
+            </li>
+
+           
+            
+          </ul>
+        </div>
+    </nav>
+
+<router-outlet></router-outlet>
+
+<header class="text-center text-black py-5">
+  <h1 class="display-5 font-weight-bold mb-4">Welcome to Arogya Pharmacy Admin Panel</h1>
+  <p class="lead mb-0">Buy Medicines at Arogya Pharmacy. 100% Authentic Medicines. Wide Range of Medicines.</p>
+ 
+</header>
+
+</div>
+<footer class="text-center text-lg-start">
+  <!-- Copyright -->
+<div class="text-center p-3">
+ © 2021 Copyright
+ <a class="text-dark" href="#">Arogya Pharmacy</a>
+</div>
+<!-- Copyright -->
+</footer>
+    

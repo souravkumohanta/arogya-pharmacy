@@ -1,0 +1,7 @@
+create table cartnation(item_no int, display_name varchar(20),quantity int, price int, totalPrice int);
+
+
+alter table bill drop column item_name;
+
+
+alter table bill add column item_no int;

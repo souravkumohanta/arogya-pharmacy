@@ -1,0 +1,26 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div>
+    <h1 class=header>Supplier Details</h1>
+   
+    <div *ngIf="flag">
+        <table id="bills">
+            <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Delivery Date</th>
+            </tr>
+
+            <tr *ngFor="let supplier of supplierInfo">
+                <td>{{supplier.item_name}}</td>
+                <td>{{supplier.quantity}}</td>
+                <td>{{supplier.type}}</td>
+                <td>{{supplier.delivery_date}}</td>
+
+            </tr>
+        </table>
+    </div>
+    <div class="text-center py-4">
+        <button  class="btn btn-secondary" value="Back" (click)="onclick()">Back</button>
+    </div>
+</div>

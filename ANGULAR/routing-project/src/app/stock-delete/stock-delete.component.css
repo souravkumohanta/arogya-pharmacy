@@ -1,0 +1,53 @@
+.header {
+  padding: 20px;
+  text-align: center;
+  color: #000;
+  font-size: 50px;
+}
+
+
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  input[type=submit]:hover {
+    background-color: #6f746f;
+  }
+  input[type=button]:hover {
+    background-color: #828582;
+  }
+  input[type=submit] {
+    
+    width: auto;
+  }
+  input[type=button] {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: auto;
+  }
+
+  #lab{
+    font-size: large;
+}
+#msg{
+  color: rgb(233, 8, 8);
+}
+
+.input{
+
+  margin: auto;
+}
+  
+  
+  

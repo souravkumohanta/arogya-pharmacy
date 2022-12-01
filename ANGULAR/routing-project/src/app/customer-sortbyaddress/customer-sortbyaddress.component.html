@@ -1,0 +1,27 @@
+<app-admin-dashboard></app-admin-dashboard>
+<div>
+    <h2 class=header>Customer Details Sorted By Address</h2>
+  
+    <div *ngIf="flag">
+   
+        <table id=bills>
+        <tr>
+            <th>Customer Address</th>
+            <th>Customer Name</th>
+            <th>Customer Phone</th>
+            <th>Customer ID</th>
+        </tr>
+        <tr *ngFor="let customer of customerInfo">
+                <td>{{customer.cust_addr}}</td>
+                <td>{{customer.cust_name}}</td>
+                <td>{{customer.cust_phone}}</td>
+                <td>{{customer.cust_id}}</td>
+                
+        </tr>
+    </table>
+    
+</div>
+<div class="text-center py-4">
+    <button  class="btn btn-secondary" value="Back" (click)="onpress()">Back</button>
+</div>
+</div>

@@ -1,0 +1,38 @@
+.header {
+    padding: 20px;
+    text-align: center;
+    color: #000;
+    font-size: 50px;
+  }
+  input[type=button]:hover {
+    background-color: #828582;
+  }
+  input[type=submit]:hover {
+    background-color: #6f746f;
+    
+  }
+  input[type=submit] {
+    border-radius: 6px;
+    
+  }
+  input[type=button] {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    margin-left: 80px;
+    border-radius: 6px;
+  }
+
+.input{
+  
+    margin: auto;
+    border:none;
+}
+
+#lab{
+    font-size: large;
+}
+
+#msg{
+    color: rgb(233, 8, 8);
+}

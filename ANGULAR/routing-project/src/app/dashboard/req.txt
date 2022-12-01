@@ -1,0 +1,41 @@
+CUSTOMER DASH:
+(STOCK)display prod with details 
+cart - ADD 
+step 1- bill is created
+step 2- order instance is added
+step 3- checkout
+
+login/register>>dashboard>>stocks(products)>>CART-bill
+login/register>>dashboard>>orders>>searchbyname 
+
+//add to cart ..........................
+Array[stockid] > passed to the backend
+
+as list of ids >  we look for the id and 
+
+since bill=order?
+
+1.we copy the object with values - getter/setter set the quantity -1
+2. copy the values of that to bill - using getter/setter or objectcopy
+when the add to cartfn is called
+/....................................................
+warning: 
+username- <must be 6chars >
+pass - <must be 8 chars with number>
+
+
+ADMIN DASHBOARD:
+ALL + bill crud
+all + customer crud
+all + order crud 
+all+ stock
+all + supplier
+
+Supplier dashboard
+
+LEFT: 
+//checkout part with a form 
+
+/xx,ehqi,21343,OD ,login,pass 
+/         Delete update 
+
